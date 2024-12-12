@@ -12,97 +12,65 @@
             margin: 0;
             padding: 0;
         }
-        .password-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .password-box {
+        h1 {
             text-align: center;
+            margin: 20px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        li {
             background: #fff;
-            padding: 20px;
+            margin: 10px 0;
+            padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
         }
-        input {
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #5cb85c;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
+        .number {
+            font-weight: bold;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <div id="password-container" class="password-container">
-        <div class="password-box">
-            <h2>Enter Password</h2>
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="checkPassword()">Submit</button>
-        </div>
-    </div>
-    <div id="content" class="hidden">
-        <h1 style="text-align: center;">Company Locations</h1>
-        <ul>
-            <li><strong>3)</strong> Groenkloof</li>
-            <li><strong>4)</strong> Patrysberg</li>
-            <li><strong>5)</strong> Bergendal</li>
-            <li><strong>6)</strong> Sunset</li>
-            <li><strong>7)</strong> Sunrise</li>
-            <li><strong>8)</strong> Sitrusrand PH4</li>
-            <li><strong>9)</strong> Freshco</li>
-            <li><strong>10)</strong> Denau</li>
-            <li><strong>11)</strong> Unipack</li>
-            <li><strong>12)</strong> Gubitz</li>
-            <li><strong>13)</strong> Lucerne</li>
-            <li><strong>14)</strong> Twypack</li>
-            <li><strong>15)</strong> Nuseason</li>
-            <li><strong>16)</strong> Nodatech</li>
-            <li><strong>20)</strong> Wagondrift</li>
-            <li><strong>21)</strong> MC Produksie</li>
-            <li><strong>22)</strong> PSB Witdak</li>
-            <li><strong>25)</strong> Naranja</li>
-            <li><strong>26)</strong> Safpro</li>
-            <li><strong>27)</strong> Safresco</li>
-            <li><strong>28)</strong> Sitrusrand Kirkwood</li>
-            <li><strong>30)</strong> Xact</li>
-            <li><strong>31)</strong> Swellenfruit</li>
-            <li><strong>32)</strong> Mimosa 1</li>
-            <li><strong>33)</strong> Mimosa 2</li>
-            <li><strong>34)</strong> Platkloof</li>
-            <li><strong>37)</strong> Vastana</li>
-            <li><strong>38)</strong> Masalal</li>
-            <li><strong>39)</strong> Coega</li>
-            <li><strong>40)</strong> Cobblestone</li>
-            <li><strong>41)</strong> Tulima</li>
-            <li><strong>42)</strong> Orchard View</li>
-        </ul>
-    </div>
-
-    <script>
-        function checkPassword() {
-            const input = document.getElementById("password").value;
-            const correctPassword = "mysecurepassword"; // Replace with your password
-
-            if (input === correctPassword) {
-                document.getElementById("password-container").style.display = "none";
-                document.getElementById("content").classList.remove("hidden");
-            } else {
-                alert("Incorrect password. Please try again.");
-            }
-        }
-    </script>
+    <h1>Company Locations</h1>
+    <ul>
+        <li><span class="number">3)</span> Groenkloof</li>
+        <li><span class="number">4)</span> Patrysberg</li>
+        <li><span class="number">5)</span> Bergendal</li>
+        <li><span class="number">6)</span> Sunset</li>
+        <li><span class="number">7)</span> Sunrise</li>
+        <li><span class="number">8)</span> Sitrusrand PH4</li>
+        <li><span class="number">9)</span> Freshco</li>
+        <li><span class="number">10)</span> Denau</li>
+        <li><span class="number">11)</span> Unipack</li>
+        <li><span class="number">12)</span> Gubitz</li>
+        <li><span class="number">13)</span> Lucerne</li>
+        <li><span class="number">14)</span> Twypack</li>
+        <li><span class="number">15)</span> Nuseason</li>
+        <li><span class="number">16)</span> Nodatech</li>
+        <li><span class="number">20)</span> Wagondrift</li>
+        <li><span class="number">21)</span> MC Produksie</li>
+        <li><span class="number">22)</span> PSB Witdak</li>
+        <li><span class="number">25)</span> Naranja</li>
+        <li><span class="number">26)</span> Safpro</li>
+        <li><span class="number">27)</span> Safresco</li>
+        <li><span class="number">28)</span> Sitrusrand Kirkwood</li>
+        <li><span class="number">30)</span> Xact</li>
+        <li><span class="number">31)</span> Swellenfruit</li>
+        <li><span class="number">32)</span> Mimosa 1</li>
+        <li><span class="number">33)</span> Mimosa 2</li>
+        <li><span class="number">34)</span> Platkloof</li>
+        <li><span class="number">37)</span> Vastana</li>
+        <li><span class="number">38)</span> Masalal</li>
+        <li><span class="number">39)</span> Coega</li>
+        <li><span class="number">40)</span> Cobblestone</li>
+        <li><span class="number">41)</span> Tulima</li>
+        <li><span class="number">42)</span> Orchard View</li>
+    </ul>
 </body>
 </html>
