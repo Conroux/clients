@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Locations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .password-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .password-box {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="password-container" class="password-container">
+        <div class="password-box">
+            <h2>Enter Password</h2>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+    </div>
+    <div id="content" class="hidden">
+        <h1 style="text-align: center;">Company Locations</h1>
+        <ul>
+            <li><strong>3)</strong> Groenkloof</li>
+            <li><strong>4)</strong> Patrysberg</li>
+            <li><strong>5)</strong> Bergendal</li>
+            <li><strong>6)</strong> Sunset</li>
+            <li><strong>7)</strong> Sunrise</li>
+            <li><strong>8)</strong> Sitrusrand PH4</li>
+            <li><strong>9)</strong> Freshco</li>
+            <li><strong>10)</strong> Denau</li>
+            <li><strong>11)</strong> Unipack</li>
+            <li><strong>12)</strong> Gubitz</li>
+            <li><strong>13)</strong> Lucerne</li>
+            <li><strong>14)</strong> Twypack</li>
+            <li><strong>15)</strong> Nuseason</li>
+            <li><strong>16)</strong> Nodatech</li>
+            <li><strong>20)</strong> Wagondrift</li>
+            <li><strong>21)</strong> MC Produksie</li>
+            <li><strong>22)</strong> PSB Witdak</li>
+            <li><strong>25)</strong> Naranja</li>
+            <li><strong>26)</strong> Safpro</li>
+            <li><strong>27)</strong> Safresco</li>
+            <li><strong>28)</strong> Sitrusrand Kirkwood</li>
+            <li><strong>30)</strong> Xact</li>
+            <li><strong>31)</strong> Swellenfruit</li>
+            <li><strong>32)</strong> Mimosa 1</li>
+            <li><strong>33)</strong> Mimosa 2</li>
+            <li><strong>34)</strong> Platkloof</li>
+            <li><strong>37)</strong> Vastana</li>
+            <li><strong>38)</strong> Masalal</li>
+            <li><strong>39)</strong> Coega</li>
+            <li><strong>40)</strong> Cobblestone</li>
+            <li><strong>41)</strong> Tulima</li>
+            <li><strong>42)</strong> Orchard View</li>
+        </ul>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById("password").value;
+            const correctPassword = "mysecurepassword"; // Replace with your password
+
+            if (input === correctPassword) {
+                document.getElementById("password-container").style.display = "none";
+                document.getElementById("content").classList.remove("hidden");
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
