@@ -16,6 +16,17 @@
             text-align: center;
             margin: 20px 0;
         }
+        #search {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
         ul {
             list-style: none;
             padding: 0;
@@ -34,11 +45,15 @@
             font-weight: bold;
             margin-right: 5px;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <h1>Company Locations</h1>
-    <ul>
+    <input type="text" id="search" placeholder="Search by number or location..." onkeyup="filterList()">
+    <ul id="company-list">
         <li><span class="number">3)</span> Groenkloof</li>
         <li><span class="number">4)</span> Patrysberg</li>
         <li><span class="number">5)</span> Bergendal</li>
@@ -72,5 +87,21 @@
         <li><span class="number">41)</span> Tulima</li>
         <li><span class="number">42)</span> Orchard View</li>
     </ul>
+
+    <script>
+        function filterList() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const items = document.querySelectorAll('#company-list li');
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchInput)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
